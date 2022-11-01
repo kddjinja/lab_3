@@ -11,14 +11,14 @@ def add_to_bag(object):
     global place_index
     global point
     place = object[2]
-    marker = True
+    flag = True
     for i in range(place):
         if (place_index[0] >= 4):
             place_index[2] = 1
             break
-        if (place <= 4 - place_index[0] and marker):
+        if (place <= 4 - place_index[0] and flag):
             point += object[3]
-            marker = False
+            flag = False
         bag[0][place_index[0]] = object[1]
         place_index[0] += 1
         place -= 1
